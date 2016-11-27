@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="MySQL - webuser@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="2.6">
+    <schema id="1" name="webuser">
+      <visible>1</visible>
+    </schema>
+    <schema id="2" name="book_sc"/>
+    <schema id="3" name="information_schema"/>
+    <schema id="4" name="mysql"/>
+    <schema id="5" name="performance_schema"/>
+    <schema id="6" name="sakila"/>
+    <schema id="7" name="sys"/>
+    <schema id="8" name="test1"/>
+    <schema id="9" name="world"/>
+    <table id="10" parent="1" name="auth_users"/>
+    <table id="11" parent="1" name="project"/>
+    <table id="12" parent="1" name="user"/>
+    <column id="13" parent="10" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(10) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="14" parent="10" name="user">
+      <mandatory>1</mandatory>
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="15" parent="10" name="password">
+      <comment>md5åŠ å¯†çš„å¯†ç &#x81;ï¼Œå›ºå®š32ä½&#x8d;</comment>
+      <mandatory>1</mandatory>
+      <data-type>char(32)|0</data-type>
+    </column>
+    <column id="16" parent="10" name="role">
+      <comment>æ™®é€šç”¨æˆ· 0ï¼Œç®¡ç&#x90;†å‘˜1</comment>
+      <mandatory>1</mandatory>
+      <data-type>smallint(1) unsigned|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <key id="17" parent="10" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="18" parent="11" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(10) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="19" parent="11" name="name">
+      <mandatory>1</mandatory>
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="20" parent="11" name="intro">
+      <data-type>text|0</data-type>
+    </column>
+    <column id="21" parent="11" name="time">
+      <data-type>varchar(25)|0</data-type>
+    </column>
+    <column id="22" parent="11" name="mtime">
+      <data-type>varchar(25)|0</data-type>
+    </column>
+    <key id="23" parent="11" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="24" parent="12" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(10) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="25" parent="12" name="name">
+      <mandatory>1</mandatory>
+      <data-type>varchar(40)|0</data-type>
+    </column>
+    <column id="26" parent="12" name="password">
+      <mandatory>1</mandatory>
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <key id="27" parent="12" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+  </database-model>
+</dataSource>
